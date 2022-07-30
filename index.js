@@ -10,12 +10,13 @@ global.client = new Discord.Client({
 global.ms = require('ms')
 global.chalk = require('chalk')
 
-fs.readdir("./events/", (err, files) => {
+// Uncomment to use an events handler for events (i.e messageUpdate)
+/* fs.readdir("./events/", (err, files) => {
     if (err) return console.log(err);
     files.forEach(file => {
         require(`./events/${file}`);
     });
-});
+}); */
 
 //Making the bot able to go to commands folder
 client.commands = new Discord.Collection();
